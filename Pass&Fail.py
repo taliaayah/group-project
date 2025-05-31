@@ -1,8 +1,7 @@
-def check_pass_fail_simplified():
+def pass_fail():
     """
-    Accepts user input for marks, validates it, and prints if the user
+    Accepts user input for marks, validates it, and prints it if the user
     has passed or failed based on a 60% threshold.
-    Simpler version.
     """
     while True:
         try:
@@ -14,14 +13,12 @@ def check_pass_fail_simplified():
 
             # Validate if the marks are within the allowed range (0 to 100)
             if 0 <= marks <= 100:
-                # If valid range, determine pass/fail
                 if marks >= 60:
                     print(f"Congratulations! With {marks}%, you have PASSED.")
                 else:
                     print(f"Unfortunately, with {marks}%, you have FAILED.")
-                break # Exit the loop as valid input was processed
+                break 
             else:
-                # Invalid range
                 print("Marks must be between 0 and 100. Please try again.")
 
         except ValueError:
@@ -31,5 +28,5 @@ def check_pass_fail_simplified():
             # Catch any other unexpected errors (less common for simple input)
             print(f"An unexpected error occurred: {e}")
 
-# Call the simplified function
-check_pass_fail_simplified()
+
+pass_fail()
